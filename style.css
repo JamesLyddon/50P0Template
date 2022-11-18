@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 /* universal selector */
 * {
@@ -16,65 +17,4 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
-}
-
-.container {
-  text-align: center;
-  animation: fadeIn 1.5s forwards;
-  animation-delay: 0.5s;
-}
-
-.progress-container {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  margin-bottom: 30px;
-  max-width: 100%;
-  width: 350px;
-}
-
-/* gray line behind blue bar */
-.progress-container::before {
-  /* need to add 'content' when using ::before or ::after */
-  content: '';
-  background-color: var(--line-border-empty);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  /* put middle of blue bar in the middle (not the top of the bar) */
-  transform: translateY(-50%);
-  height: 4px;
-  width: 100%;
-  /* put bar behind blue bar */
-  z-index: -2;
-}
-
-/* blue bar */
-.progress {
-  background-color: var(--line-border-fill);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  /* put middle of blue bar in the middle (not the top of the bar) */
-  transform: translateY(-50%);
-  height: 4px;
-  width: 0%;
-  /* put bar behind numbers */
-  z-index: -1;
-  transition: 0.4s ease;
-}
-
-/* circles */
-.circle {
-  background-color: var(--gray-fill);
-  color: rgba(255, 255, 255, 0.1);
-  font-weight: bold;
-  /* makes div into a circle */
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  /* centers the circle around text content */
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
